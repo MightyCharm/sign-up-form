@@ -28,17 +28,89 @@ img, picture, svg, video {
 }
 
 
+/* whole page */
 .container {
     display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.item-1 {
+/* page left side */
+.flexbox-1 {
     width: 40%;
 }
 
-.item-2 {
+/* page right side */
+.flexbox-2 {
     width: 60%;
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+    margin-left: 3rem;
+    /*border: 4px solid red;*/
+}
+
+/* page right side top */
+.item-1 {
+    font-size: 2rem;
+    font-family: customFont, sans-serif;
+  
 }
 
 
+/* page right side middle */
+.item-2 {
+    /*border: 1px solid red;*/
+}
+
+/* page right side bottom */
+.item-3 {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    /*border: 1px solid yellow;*/
+   
+}
+
+/* legend (form) */
+.box-1 {
+    margin-bottom: 1rem;
+}
+
+.box-2, /* input firstName & lastName*/
+.box-3, /* input email & phone number */
+.box-4 /* input password & confirmPassword */
+{
+    display: flex;
+    gap: 4rem;
+    margin-bottom: 1.5rem;
+    /*border: 1px solid green;*/
+    
+}
+
+legend {
+    font-size: 2rem;
+}
+
+fieldset {
+    border: none;
+}
+
+input {
+    font-size: 2rem;
+}
+
+label {
+    display: block;
+}
+
+button {
+    width: 18rem;
+    font-size: 1.4rem;
+    font-weight: 700;
+    border: none;
+    border-radius: 0.3rem;
+    background-color: #596D48;
+    padding: 0.7rem; /* top/bottom left/right */
+}
 
