@@ -23,7 +23,7 @@ body {
 }
 
 img, picture, svg, video {
-    display: block;
+    /*display: block;*/
     max-width: 100%;
 }
 
@@ -37,12 +37,46 @@ img, picture, svg, video {
 
 /* page left side */
 .flexbox-1 {
-    width: 40%;
+    width: 40vw;
+    height: 100vh;
+    position: relative;
+}
+
+.img-background {
+   height: 100%;
+   min-width: 100%;
+}
+
+.img-logo {
+    position: absolute;
+    left: 20%;
+    top: 22%;
+    width: 17%;
+}
+
+.div-img {
+    display: inline-block;
+    position: absolute;
+    width: 100%;
+    height: 20%;
+    background-color: #00000070; 
+    left: 0%;
+    top: 20%;   
+}
+
+.div-text {
+    position: absolute;
+    display: inline-block;
+    left: 40%;
+    top: 24%;
+    font-size: 6vw;
+
+    font-family: customFont, sans-serif;
 }
 
 /* page right side */
 .flexbox-2 {
-    width: 60%;
+    width: 60vw;
     display: flex;
     gap: 1rem;
     flex-direction: column;
@@ -53,8 +87,6 @@ img, picture, svg, video {
 /* page right side top */
 .item-1 {
     font-size: 2rem;
-    font-family: customFont, sans-serif;
-  
 }
 
 
@@ -68,6 +100,7 @@ img, picture, svg, video {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
+    margin-bottom: 5rem;
     /*border: 1px solid yellow;*/
    
 }
@@ -113,4 +146,5 @@ button {
     background-color: #596D48;
     padding: 0.7rem; /* top/bottom left/right */
 }
+
 
