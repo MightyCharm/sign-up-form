@@ -21,65 +21,72 @@
 
       <!-- page right side -->
       <div class="flexbox-2">
-
+      
         <!-- page right side top (text)-->
-        <div class="item-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Id quam ex, non nemo dignissimos
-            animi, accusantium obcaecati temporibus iusto laudantium consequatur? Placeat dignissimos 
-            et maiores quaerat dolore repudiandae inventore! Sint!
+        <div class="item-1">
+          <p>This not a real online service! You know you need something
+          like this in your life to help you realize your deepest dreams.
+          Sign up now to get started.
+          </p>
+          <p>
+          You know you want to.
+          </p>
         </div>
 
         <!-- page right side mid (input fields)-->
         <div class="item-2">
           <form id="form" action="/" method="GET">
-            <fieldset>
-              <legend>Let's do this!</legend>
-              <div class="box-1">
-                <div>
-                  <label for="firstName">FIRST NAME</label>
-                  <input type="text" id="firstName" name="firstName" required>
+            <div class="form"> <!-- to separate submit button for styling-->
+              <fieldset>
+                <legend>Let's do this!</legend>
+                <div class="box-1">
+                  <div>
+                    <label for="firstName">FIRST NAME</label>
+                    <input type="text" id="firstName" name="firstName" required>
+                  </div>
+
+                  <div>
+                    <label for="lastName">LAST NAME</label>
+                    <input type="text" id="lastName" name="lastName" required>
+                  </div>
                 </div>
 
-                <div>
-                  <label for="lastName">LAST NAME</label>
-                  <input type="text" id="lastName" name="lastName" required>
-                </div>
-              </div>
+                <div class="box-2">
+                  <div>
+                    <label for="email">EMAIL</label>
+                    <input type="email" id="email" name="email" required>
+                  </div>
 
-              <div class="box-2">
-                <div>
-                  <label for="email">EMAIL</label>
-                  <input type="email" id="email" name="email" required>
-                </div>
-
-                <div>
-                  <label for="telephone">PHONE NUMBER</label>
-                  <input type="tel" id="telephone" name="telephone" required>
-                </div>
-              </div>
-
-              <div class="box-3">
-                <div>
-                  <label for="password">PASSWORD</label>
-                  <input type="password" id="password" name="password" minlength="5" required>
-                  <div class="error"></div>
+                  <div>
+                    <label for="telephone">PHONE NUMBER</label>
+                    <input type="tel" id="telephone" name="telephone" minlength="5" required>
+                  </div>
                 </div>
 
-                <div>
-                  <label for="confirmPassword">CONFIRM PASSWORD</label>
-                  <input type="password" id="confirmPassword" name="confirmPassword" minlength="5" required>
-                </div>  
-              </div>  
-            </fieldset>
+                <div class="box-3">
+                  <div>
+                    <label for="password">PASSWORD</label>
+                    <input type="password" id="password" name="password" minlength="5" required>
+                  </div>
 
+                  <div>
+                    <label for="confirmPassword">CONFIRM PASSWORD</label>
+                    <input type="password" id="confirmPassword" name="confirmPassword" minlength="5" required>
+                    <div class="error"></div>
+                  </div>  
+                </div>          
+              </fieldset>
+            </div>  
             <div class="box-4">
               <button id="submit" type="submit">Create Account</button>
-              <p>Already have an account? <a href="#">Log in</a></p>
             </div>
-
-            </form>
-          </div>
+          </form>
+        </div> <!-- div class="item-2" -->
+        <div class="link">
+          <p>Already have an account? <a href="#">Log in</a></p>
         </div>
-      </div>
+      </div> <!-- div class="flexbox-2"-->
+    </div> <!-- class="container" -->
 
     <script src="script.js"></script>
   </body>
