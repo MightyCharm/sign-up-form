@@ -1,45 +1,53 @@
-
-
-
 // goal compare text input for password and confirm password
 const btnSubmit = document.querySelector("#submit");
 const inputPassword = document.querySelector("#password");
 const inputPasswordConfirm = document.querySelector("#confirmPassword");
-const divError = document.querySelector(".error");
-let password = "";
-let passwordConfirm = "";
-
-console.log(btnSubmit);
-
-btnSubmit.addEventListener("click", (e) => {
-    console.log("password: " + password);
-    console.log("passwordConfirm: " + passwordConfirm);
-    if(password != passwordConfirm && password.length >= 5 && passwordConfirm.length >= 5) {
-        console.log("here");
-        e.preventDefault();
+const divValidate = document.querySelector(".validate");
 
 
-        divError.textContent = "Passwords don't match";
-        divError.style.color = "#ff0000";
-        inputPasswordConfirm.style.border = "1px solid red";
-        inputPassword.style.border = "1px solid red";
+function validatePassword() {
+    if(inputPassword.value == inputPasswordConfirm.value &&
+        inputPassword.value.length != 0 ) {
+        divValidate.textContent = "* Passwords match";
+        divValidate.style.color = "#00b33c";
+        inputPassword.style.border = "1px solid #00b33c";
+        inputPasswordConfirm.style.border = "1px solid #00b33c";
+    }
+    else {
+        divValidate.textContent = "* Password don't match";
+        divValidate.style.color = "#ff0000";
+        inputPassword.style.border = "1px solid #ff0000";
+        inputPasswordConfirm.style.border = "1px solid #ff0000";
+    }
+}
+
+inputPassword.addEventListener("keyup", (e) => {
+   
+    if(inputPasswordConfirm.value.length != 0) {
+        validatePassword();
     }
     
-});
+    if(inputPassword.value.length == 0 && inputPasswordConfirm.value.length == 0) {
+        divValidate.textContent = "";
+        inputPassword.style.border = "1px solid #E5E7EB";
+        inputPasswordConfirm.style.border = "1px solid #E5E7EB";
+    }
+    
+})
 
-inputPassword.addEventListener("input", (e) => {
-    password = inputPassword.value;
-    divError.textContent = "";
-    inputPasswordConfirm.style.border = "1px solid #E5E7EB";
-    inputPassword.style.border = "1px solid #E5E7EB";
-    //console.log(pw);
-});
+inputPasswordConfirm.addEventListener("keyup", () => {
+    validatePassword();
+    if(inputPassword.value.length == 0 && inputPasswordConfirm.value.length == 0) {
+        divValidate.textContent = "";
+        inputPassword.style.border = "1px solid #E5E7EB";
+        inputPasswordConfirm.style.border = "1px solid #E5E7EB";
+    }
+})
 
-// password is checked if user uses the second input (confirmPassword)
-inputPasswordConfirm.addEventListener("input", (e) => {
-    passwordConfirm = inputPasswordConfirm.value;
-    divError.textContent = "";
-    inputPasswordConfirm.style.border = "1px solid #E5E7EB";
-    inputPassword.style.border = "1px solid #E5E7EB";
-    //console.log(e.data);
+
+btnSubmit.addEventListener("click", (e) => {
+    if(inputPassword.value != inputPasswordConfirm.value) {
+        console.log("here");
+        e.preventDefault();
+    }
 });

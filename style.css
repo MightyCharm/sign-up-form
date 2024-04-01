@@ -25,6 +25,7 @@ body {
 img, picture, svg, video {
     /*display: block;*/
     max-width: 100%;
+    
 }
 
 
@@ -40,7 +41,6 @@ img, picture, svg, video {
 
 /* page left side */
 .flexbox-1 { 
-    /*border: 1px solid yellow;*/
     width: 40vw;
     min-height: 100vh;
     position: relative;
@@ -78,7 +78,7 @@ img, picture, svg, video {
     top: 24%;
     font-size: 6vw;
     font-family: customFont, sans-serif; 
-    color: white; 
+    color: #fff; 
 }
 
 /* page right side */
@@ -94,7 +94,7 @@ img, picture, svg, video {
 /* page right side top */
 .item-1 {
     font-size: 2rem;
-    width: 50%;
+    width: 70%;
     /*border: 1px solid red;*/
 }
 
@@ -157,7 +157,7 @@ legend,
 }
 
 /* text that will be displayed under pw input if pw is incorrect */
-.error {
+.validate {
     padding: 0.1rem;
     position: absolute;
 }
