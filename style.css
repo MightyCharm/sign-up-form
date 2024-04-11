@@ -7,15 +7,10 @@
     box-sizing: border-box;
 }
 
-
 * {
     margin: 0;
     padding: 0;
     font: inherit;
-}
-
-html {
-    /*color-scheme: dark light;*/
 }
 
 body {
@@ -27,7 +22,6 @@ img, picture, svg, video {
     max-width: 100%;
     
 }
-
 
 /* whole page */
 .container {
@@ -51,15 +45,7 @@ img, picture, svg, video {
     min-width: 100%;
 }
 
-.img-logo {
-    position: absolute;
-    left: 20%;
-    top: 21%;
-    width: 17%;
-    height: 18%;
-}
-
-/* transparent black background for logo and text */ 
+/* transparent black background, for logo and text */ 
 .div-img {
     display: inline-block;
     position: absolute;
@@ -81,40 +67,58 @@ img, picture, svg, video {
     color: #fff; 
 }
 
+.img-logo {
+    position: absolute;
+    left: 20%;
+    top: 21%;
+    width: 17%;
+    height: 18%;
+}
+
+.credit {
+    position: absolute;
+    bottom: 2%;
+    left: 33%;
+    color: #fff;
+}
+
+.a-credit {
+    color: #fff;
+}
+
+.a-credit:hover {
+    color: #ff1493;
+}
+
 /* page right side */
 .flexbox-2 {
-    /*border: 1px solid green;*/
     width: 60vw;
     display: flex;
     gap: 1rem;
     flex-direction: column;
-    /*margin-left: 3rem;*/
 }
 
 /* page right side top */
 .item-1 {
     font-size: 2rem;
     width: 70%;
-    /*border: 1px solid red;*/
 }
 
 /* text paragraphs */
 .item-1 p {
-    /*border: 1px solid blue;*/
     margin-bottom: 1rem;
 }
 
 /* page right side middle */
 .item-2 {
     /*border: 1px solid green;*/
+    margin-top: 2rem;
     /*background-color: #fff;*/
-    
 }
 
-/* page right side middle, without create account button */
+/* page right side middle, without the create account button */
 .form {
     padding-top: 1rem;
-    /*border:1px solid red;*/
     background-color: #fff;
     box-shadow: 5px 5px 4px 5px #d7d7d7;
 }
@@ -126,17 +130,15 @@ img, picture, svg, video {
     display: flex;
     gap: 4rem;
     margin-bottom: 1.5rem;
-    /*border: 1px solid green;*/
 }
 
 .box-3 {
     margin-bottom: 4%;
 }
 
-/* btn create account */
+/* div button create account */
 .box-4 {
     padding-top: 2rem;
-    /*border: 1px solid red;*/
 }
 
 /* to position content on right side with a margin to the left */
@@ -145,27 +147,35 @@ legend,
 .box-1,
 .box-2,
 .box-3,
-.box-4,
-.link {
+.box-4 {
     margin-left: 3rem;
 }
 
-/* text: Already have an account? link: Login in */
-.link {
-    /*border: 1px solid yellow;*/
+/* div: Already have an account? link: Login in */
+.item-3{
     font-size: 1.3rem;
+    margin-left: 3rem;
 }
 
-/* text that will be displayed under pw input if pw is incorrect */
+/* text for password validation */
 .validate {
     padding: 0.1rem;
     position: absolute;
 }
 
+.a-account {
+    color: #596D48;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.a-account:hover {
+    color:  #728b5c;
+}
+
 /* legend text(Let's do this!) */
 legend {
     margin-bottom: 1rem;
-    /*border: 1px solid red;*/
     font-size: 2rem;
     font-weight: 500;
 }
@@ -180,7 +190,6 @@ input {
     font-size: 1.5rem;
     padding: 0.2rem 0.5rem 0.2rem 0.5rem;
 }
-
 
 /* removes standard border from browser*/
 input:focus-visible {
@@ -201,7 +210,7 @@ label {
     letter-spacing: 0.1rem;
 }
 
-/* btn: create account*/
+/* button create account*/
 button {
     width: 17rem;
     font-size: 1.4rem;
@@ -218,7 +227,6 @@ button:hover {
     background-color: #728b5c; 
 }
 
-
 @media only screen and (max-width: 1100px) {
     .box-1,
     .box-2,
@@ -226,9 +234,7 @@ button:hover {
         display: flex;
         flex-direction: column;
         gap: 0;
-        margin-bottom: 1rem;
-           
-        
+        margin-bottom: 1rem;    
     }
     label {
         margin-top: 1rem;
