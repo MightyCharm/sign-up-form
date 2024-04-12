@@ -20,7 +20,6 @@ body {
 img, picture, svg, video {
     /*display: block;*/
     max-width: 100%;
-    
 }
 
 /* whole page */
@@ -34,7 +33,7 @@ img, picture, svg, video {
 }
 
 /* page left side */
-.flexbox-1 { 
+.flexbox-1 {
     width: 40vw;
     min-height: 100vh;
     position: relative;
@@ -43,6 +42,7 @@ img, picture, svg, video {
 .img-background {
     height: 100vh;
     min-width: 100%;
+    object-fit: cover;
 }
 
 /* transparent black background, for logo and text */ 
